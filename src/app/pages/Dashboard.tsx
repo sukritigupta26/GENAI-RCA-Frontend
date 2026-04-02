@@ -23,72 +23,72 @@ export function Dashboard() {
   return (
     <div className="h-full overflow-y-auto bg-slate-950">
       {/* Header */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800 px-8 py-6">
-        <h1 className="text-2xl font-bold text-slate-100 mb-2">Dashboard</h1>
-        <p className="text-sm text-slate-400">Real-time metrics and system health overview</p>
+      <div className="bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800 px-4 lg:px-8 py-4 lg:py-6">
+        <h1 className="text-xl lg:text-2xl font-bold text-slate-100 mb-2">Dashboard</h1>
+        <p className="text-xs lg:text-sm text-slate-400">Real-time metrics and system health overview</p>
       </div>
 
-      <div className="p-8">
+      <div className="p-4 lg:p-8">
         {/* System Overview Cards */}
-        <div className="grid grid-cols-4 gap-6 mb-8">
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <Activity className="w-8 h-8 text-cyan-400" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-6 lg:mb-8">
+          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
+            <div className="flex items-center justify-between mb-3 lg:mb-4">
+              <Activity className="w-6 h-6 lg:w-8 lg:h-8 text-cyan-400" />
               <span className="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">Active</span>
             </div>
-            <div className="text-3xl font-bold text-slate-100 mb-1">3</div>
-            <div className="text-sm text-slate-400">K8s Clusters</div>
+            <div className="text-2xl lg:text-3xl font-bold text-slate-100 mb-1">3</div>
+            <div className="text-xs lg:text-sm text-slate-400">K8s Clusters</div>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <Server className="w-8 h-8 text-purple-400" />
+          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
+            <div className="flex items-center justify-between mb-3 lg:mb-4">
+              <Server className="w-6 h-6 lg:w-8 lg:h-8 text-purple-400" />
               <span className="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">Online</span>
             </div>
-            <div className="text-3xl font-bold text-slate-100 mb-1">2</div>
-            <div className="text-sm text-slate-400">Ansible Towers</div>
+            <div className="text-2xl lg:text-3xl font-bold text-slate-100 mb-1">2</div>
+            <div className="text-xs lg:text-sm text-slate-400">Ansible Towers</div>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <Zap className="w-8 h-8 text-green-400" />
+          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
+            <div className="flex items-center justify-between mb-3 lg:mb-4">
+              <Zap className="w-6 h-6 lg:w-8 lg:h-8 text-green-400" />
               <span className="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">5/5</span>
             </div>
-            <div className="text-3xl font-bold text-slate-100 mb-1">77</div>
-            <div className="text-sm text-slate-400">Total Builds Today</div>
+            <div className="text-2xl lg:text-3xl font-bold text-slate-100 mb-1">77</div>
+            <div className="text-xs lg:text-sm text-slate-400">Total Builds Today</div>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <CheckCircle className="w-8 h-8 text-emerald-400" />
+          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
+            <div className="flex items-center justify-between mb-3 lg:mb-4">
+              <CheckCircle className="w-6 h-6 lg:w-8 lg:h-8 text-emerald-400" />
               <span className="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded-full">99.8%</span>
             </div>
-            <div className="text-3xl font-bold text-slate-100 mb-1">Uptime</div>
-            <div className="text-sm text-slate-400">Last 30 days</div>
+            <div className="text-2xl lg:text-3xl font-bold text-slate-100 mb-1">Uptime</div>
+            <div className="text-xs lg:text-sm text-slate-400">Last 30 days</div>
           </div>
         </div>
 
         {/* Kubernetes Clusters */}
-        <div className="mb-8">
-          <h2 className="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
-            <Activity className="w-5 h-5 text-cyan-400" />
+        <div className="mb-6 lg:mb-8">
+          <h2 className="text-lg lg:text-xl font-bold text-slate-100 mb-3 lg:mb-4 flex items-center gap-2">
+            <Activity className="w-4 h-4 lg:w-5 lg:h-5 text-cyan-400" />
             Kubernetes Clusters
           </h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
             {clusters.map((cluster) => (
-              <div key={cluster.name} className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+              <div key={cluster.name} className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-semibold text-slate-100">{cluster.name}</h3>
+                  <h3 className="font-semibold text-slate-100 text-sm lg:text-base">{cluster.name}</h3>
                   {cluster.status === 'healthy' ? (
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-400" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 text-yellow-400" />
+                    <AlertCircle className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400" />
                   )}
                 </div>
 
                 <div className="space-y-3">
                   <div>
-                    <div className="flex justify-between text-sm mb-1">
+                    <div className="flex justify-between text-xs lg:text-sm mb-1">
                       <span className="text-slate-400">CPU Usage</span>
                       <span className="text-slate-100">{cluster.cpu}%</span>
                     </div>
@@ -101,7 +101,7 @@ export function Dashboard() {
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-sm mb-1">
+                    <div className="flex justify-between text-xs lg:text-sm mb-1">
                       <span className="text-slate-400">Memory Usage</span>
                       <span className="text-slate-100">{cluster.memory}%</span>
                     </div>
@@ -115,11 +115,11 @@ export function Dashboard() {
 
                   <div className="pt-3 border-t border-slate-800 grid grid-cols-2 gap-4">
                     <div>
-                      <div className="text-2xl font-bold text-slate-100">{cluster.pods}</div>
+                      <div className="text-xl lg:text-2xl font-bold text-slate-100">{cluster.pods}</div>
                       <div className="text-xs text-slate-400">Pods Running</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-slate-100">{cluster.nodes}</div>
+                      <div className="text-xl lg:text-2xl font-bold text-slate-100">{cluster.nodes}</div>
                       <div className="text-xs text-slate-400">Nodes</div>
                     </div>
                   </div>
@@ -130,16 +130,16 @@ export function Dashboard() {
         </div>
 
         {/* Ansible Towers */}
-        <div className="mb-8">
-          <h2 className="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
-            <Server className="w-5 h-5 text-purple-400" />
+        <div className="mb-6 lg:mb-8">
+          <h2 className="text-lg lg:text-xl font-bold text-slate-100 mb-3 lg:mb-4 flex items-center gap-2">
+            <Server className="w-4 h-4 lg:w-5 lg:h-5 text-purple-400" />
             Ansible Towers
           </h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             {ansibleTowers.map((tower) => (
-              <div key={tower.name} className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+              <div key={tower.name} className="bg-slate-900 border border-slate-800 rounded-xl p-4 lg:p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-semibold text-slate-100">{tower.name}</h3>
+                  <h3 className="font-semibold text-slate-100 text-sm lg:text-base">{tower.name}</h3>
                   <span className="text-xs bg-green-500/10 text-green-400 px-3 py-1 rounded-full uppercase">
                     {tower.status}
                   </span>
@@ -147,15 +147,15 @@ export function Dashboard() {
 
                 <div className="grid grid-cols-3 gap-4">
                   <div>
-                    <div className="text-2xl font-bold text-slate-100">{tower.jobs}</div>
+                    <div className="text-xl lg:text-2xl font-bold text-slate-100">{tower.jobs}</div>
                     <div className="text-xs text-slate-400">Jobs Today</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-green-400">{tower.success}</div>
+                    <div className="text-xl lg:text-2xl font-bold text-green-400">{tower.success}</div>
                     <div className="text-xs text-slate-400">Successful</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-red-400">{tower.failed}</div>
+                    <div className="text-xl lg:text-2xl font-bold text-red-400">{tower.failed}</div>
                     <div className="text-xs text-slate-400">Failed</div>
                   </div>
                 </div>
@@ -166,37 +166,39 @@ export function Dashboard() {
 
         {/* Jenkins Workers */}
         <div>
-          <h2 className="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-green-400" />
+          <h2 className="text-lg lg:text-xl font-bold text-slate-100 mb-3 lg:mb-4 flex items-center gap-2">
+            <Zap className="w-4 h-4 lg:w-5 lg:h-5 text-green-400" />
             Jenkins Workers
           </h2>
           <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-            <table className="w-full">
-              <thead className="bg-slate-800/50">
-                <tr>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-slate-300">Worker</th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-slate-300">Status</th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-slate-300">Builds Today</th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-slate-300">Queue</th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-slate-300">Executors</th>
-                </tr>
-              </thead>
-              <tbody>
-                {jenkinsWorkers.map((worker, index) => (
-                  <tr key={worker.name} className={index !== jenkinsWorkers.length - 1 ? 'border-b border-slate-800' : ''}>
-                    <td className="px-6 py-4 text-sm text-slate-100">{worker.name}</td>
-                    <td className="px-6 py-4">
-                      <span className="text-xs bg-green-500/10 text-green-400 px-3 py-1 rounded-full uppercase">
-                        {worker.status}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-slate-100">{worker.builds}</td>
-                    <td className="px-6 py-4 text-sm text-slate-100">{worker.queue}</td>
-                    <td className="px-6 py-4 text-sm text-slate-100">{worker.executors}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-slate-800/50">
+                  <tr>
+                    <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm font-semibold text-slate-300">Worker</th>
+                    <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm font-semibold text-slate-300">Status</th>
+                    <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm font-semibold text-slate-300">Builds</th>
+                    <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm font-semibold text-slate-300 hidden md:table-cell">Queue</th>
+                    <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm font-semibold text-slate-300 hidden md:table-cell">Executors</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {jenkinsWorkers.map((worker, index) => (
+                    <tr key={worker.name} className={index !== jenkinsWorkers.length - 1 ? 'border-b border-slate-800' : ''}>
+                      <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-slate-100">{worker.name}</td>
+                      <td className="px-3 lg:px-6 py-3 lg:py-4">
+                        <span className="text-xs bg-green-500/10 text-green-400 px-2 lg:px-3 py-1 rounded-full uppercase">
+                          {worker.status}
+                        </span>
+                      </td>
+                      <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-slate-100">{worker.builds}</td>
+                      <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-slate-100 hidden md:table-cell">{worker.queue}</td>
+                      <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-slate-100 hidden md:table-cell">{worker.executors}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

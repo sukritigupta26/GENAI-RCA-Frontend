@@ -105,9 +105,9 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 w-[480px] h-[600px] bg-slate-900 rounded-2xl shadow-2xl border border-slate-800 flex flex-col overflow-hidden z-50">
+    <div className="fixed inset-0 lg:inset-auto lg:bottom-6 lg:right-6 lg:w-[480px] lg:h-[600px] bg-slate-900 lg:rounded-2xl shadow-2xl border-0 lg:border border-slate-800 flex flex-col overflow-hidden z-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-slate-800 px-6 py-4 flex items-center justify-between">
+      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-slate-800 px-4 lg:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
             <span className="text-cyan-400 text-lg">🤖</span>
@@ -129,7 +129,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-6 bg-slate-950">
+      <div className="flex-1 overflow-y-auto p-4 lg:p-6 bg-slate-950">
         {messages.map((message) => (
           <ChatBubble
             key={message.id}
@@ -156,7 +156,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
       </div>
 
       {/* Input */}
-      <div className="border-t border-slate-800 p-4 bg-slate-900">
+      <div className="border-t border-slate-800 p-3 lg:p-4 bg-slate-900">
         <div className="flex gap-2">
           <input
             type="text"
@@ -164,7 +164,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Ask about system status, K8s, Ansible, Jenkins..."
-            className="flex-1 bg-slate-800 text-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50 placeholder:text-slate-500"
+            className="flex-1 bg-slate-800 text-slate-100 rounded-lg px-3 lg:px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50 placeholder:text-slate-500"
           />
           <button
             onClick={handleSend}

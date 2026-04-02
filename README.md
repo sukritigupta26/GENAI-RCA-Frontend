@@ -1,7 +1,7 @@
 
-  # RCA Bot for DevOps
+  # RCS Bot for DevOps
 
-  This is a code bundle for RCA Bot for DevOps. The original project is available at https://www.figma.com/design/YM0rb38YkiJCxHosujRvrQ/RCA-Bot-for-DevOps.
+  This is a code bundle for RCS Bot for DevOps. The original project is available at https://www.figma.com/design/YM0rb38YkiJCxHosujRvrQ/RCS-Bot-for-DevOps.
 
   ## Running the code
 
